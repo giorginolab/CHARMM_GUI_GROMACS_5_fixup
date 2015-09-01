@@ -8,25 +8,31 @@ MDP input files according to the
 parameters provided by de Jong et al in
 http://md.chem.rug.nl/cgmartini/index.php/force-field-parameters/input-parameters
 
-The following parameters are modified (or added, if not provided):
 
-```
-cutoff-scheme            = Verlet
-coulombtype              = reaction-field
-rcoulomb                 = 1.1
-epsilon_r                = 15
-epsilon_rf               = 0
-vdw_type                 = cutoff  
-vdw-modifier             = Potential-shift-verlet
-rvdw                     = 1.1
-verlet-buffer-tolerance  = 0.005
-nstxout = 0
-nstvout = 0
-nstfout = 0
-```
+Usage
+-----
 
-Citation:
+Extract the `charmm-gui.tgz` archive produced by the last step of
+CHARMM-GUI. Go in the `gromacs` directory and run the supplied
+`fixup5.sh` script.
+
+The MDP files for the 6 equilibration steps are patched as follows (in
+short):
+
+* 6.1: the `group` cut-off scheme is selected
+* 6.2 to 6.6, and production: rection field and Verlet cutoff are enabled.
+
+See the `fixup5.sh` script for the parameters, which should correspond to
+those in the citation below.
+
+
+Parameters
+----------
+
+See
 
 > D.H. de Jong, S. Baoukina, H.I. Ingólfsson, Marrink S.J. Martini
 > straight: boosting performance using a shorter cutoff and
 > GPUs. Comput. Phys. Commun., submitted 2015.
+
+
