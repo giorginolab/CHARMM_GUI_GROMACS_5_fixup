@@ -7,8 +7,8 @@ them to be usable with GROMACS 5. The patched MDP files allow the use
 GPUs and newer GROMACS optimizations. Fix-ups are done according to
 the
 [martini_v2.x_new-rf.mdp](http://md.chem.rug.nl/cgmartini/images/parameters/exampleMDP/martini_v2.x_new-rf.mdp)
-parameters provided by de Jong et al. at
-http://md.chem.rug.nl/cgmartini/index.php/force-field-parameters/input-parameters
+parameters provided by de Jong *et al.* at
+http://md.chem.rug.nl/cgmartini/index.php/force-field-parameters/input-parameters .
 
 
 Usage
@@ -18,14 +18,14 @@ Extract the `charmm-gui.tgz` archive produced by the last step of
 CHARMM-GUI. Go in the `gromacs` directory and run the supplied
 `fixup5.sh` script.
 
-The MDP files for the 6 equilibration steps are patched as follows (in
+The MDP files for the 6.x equilibration steps are patched as follows (in
 short):
 
 * 6.1: the `group` cut-off scheme is selected
 * 6.2 to 6.6, and production: rection field and Verlet cutoff are enabled.
 
 See the `fixup5.sh` script for the parameters, which should correspond to
-those in the citation below.
+those in the citation below.  Adjusting paths is left as an exercise to the reader.
 
 
 Parameters
